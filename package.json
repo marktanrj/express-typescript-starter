@@ -12,7 +12,10 @@
     "cors": "^2.8.5",
     "dayjs": "^1.11.5",
     "express": "^4.18.1",
+    "express-json-validator-middleware": "^3.0.1",
     "helmet": "^6.0.0",
+    "knex": "^2.3.0",
+    "pg": "^8.8.0",
     "pino": "^8.6.1",
     "pino-pretty": "^9.1.1"
   },
@@ -31,6 +34,7 @@
     "eslint-plugin-import": "^2.26.0",
     "nodemon": "^2.0.20",
     "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.1.0",
     "typescript": "^4.8.3"
   }
 }

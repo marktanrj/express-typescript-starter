@@ -1,8 +1,9 @@
-import express, {
+import type {
   Request,
   Response,
   NextFunction,
 } from 'express';
+import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
 
@@ -15,7 +16,7 @@ export const expressLoader = (app: express.Application) => {
   app.use(cors());
 
   app.get('/', (_req: Request, res: Response) => {
-    res.send('Hello World!');
+    res.send('Server running');
   });
 
   // error handler

@@ -4,7 +4,8 @@ module.exports = {
   },
   extends: [
     "airbnb-base",
-    "airbnb-typescript/base"
+    "airbnb-typescript/base",
+    "plugin:@typescript-eslint/recommended"
   ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
@@ -19,6 +20,8 @@ module.exports = {
     "linebreak-style": "off",
     "import/prefer-default-export": "off",
     "import/no-cycle": "off",
-    "arrow-body-style": "off"
+    "arrow-body-style": "off",
+    "import/extensions": "off",
+    "@typescript-eslint/consistent-type-imports": "error",
   }
 }
