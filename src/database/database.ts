@@ -1,4 +1,12 @@
-import knex from 'knex';
+import Knex from 'knex';
+import session from 'express-session';
+import KnexSessionStoreConnector from 'connect-session-knex';
 import { config } from '~/config';
 
-export const knexDb = knex(config.database);
+export const knex = Knex(config.database);
+
+const KnexSessionStore = KnexSessionStoreConnector(session);
+export const store = new KnexSessionStore({
+  knex,
+  tablename: 'sessions',
+});

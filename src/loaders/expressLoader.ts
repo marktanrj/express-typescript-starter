@@ -6,6 +6,9 @@ import type {
 import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
+import session from 'express-session';
+import { config } from '~/config';
+import { store } from '~/database/database';
 
 export const expressLoader = (app: express.Application) => {
   app.use(helmet());
@@ -14,6 +17,13 @@ export const expressLoader = (app: express.Application) => {
     extended: true,
   }));
   app.use(cors());
+
+  app.use(
+    session({
+      ...config.session,
+      store,
+    }),
+  );
 
   app.get('/', (_req: Request, res: Response) => {
     res.send('Server running');

@@ -12,6 +12,12 @@ interface Config {
       password: string;
       database: string;
     }
+  },
+  session: {
+    secret: string,
+    cookie: {
+      maxAge: number,
+    },
   }
 }
 

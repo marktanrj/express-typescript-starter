@@ -9,6 +9,12 @@ const config = {
       password : 'password',
       database : 'database'
     }
+  },
+  session: {
+    secret: 'keyboard cat',
+    cookie: {
+      maxAge: 10000,
+    },
   }
 }
 
